@@ -26,7 +26,7 @@ function Orders() {
   return (
     <>
       {ordersData && ordersData.length > 0 ? (
-        <div className="container my-4 mx-auto">
+        <div className="container w-96  mx-auto">
           {ordersData?.map((orders) => {
             return (
               <>
@@ -39,8 +39,9 @@ function Orders() {
                           {data.order_date} <hr />{" "}
                         </div>
                       ) : (
-                        <div className="my-4 w-96 border-black border-gradient p-4 dark:border-white rounded-lg">
+                        <div className=" w-96 border-black dark:bg-black  bg-gray-400 border-gradient p-4 dark:border-white rounded-lg">
                           <div className="relative w-full rounded-lg h-72">
+                            
                             <Image
                               src={data.img}
                               layout="fill"
