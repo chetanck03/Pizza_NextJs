@@ -1,0 +1,2 @@
+# Pizza_NextJs
+ Pizza Hut: Your Slice, Your Way  Welcome to Pizza Hut – where your pizza fantasies come to life! Our app, built with the robust MERN stack, is your one-stop shop for crafting the ultimate pizza. From the crust to the toppings, you call the shots. Experience the joy of pizza made easy, secure, and oh-so-delicious. Get ready, pizza lovers, your next slice of heaven is just a click away!
