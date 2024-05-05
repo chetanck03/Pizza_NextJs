@@ -1,28 +1,38 @@
 import { CartContext } from '@/utils/ContextReducer';
 import React, { useContext, useState } from 'react'
+import { useRouter } from "next/router";
 
 function Cart() {
   const { state, dispatch } = useContext(CartContext)
+  const [errorMessage, setErrorMessage] = useState(
+    "Your order was canceled 😔"
+  );
+  const router = useRouter();
   const [success, setSuccess] = useState(false)
   const [fail, setFail] = useState(false)
 
   const handleCheckOut = async () =>{
+    let userEmail = localStorage.getItem("userEmail");
     // Logic for order checkout
-    let userEmail = localStorage.getItem('userEmail')
-
-    await fetch("api/ordersData",{
-      method: "POST",
-      headers:{
-        "Content-Type": "application/json"
+    console.log(localStorage.getItem("userEmail"));
+    if (
+      localStorage.getItem("userEmail") === null ||
+      localStorage.getItem("userEmail") === undefined
+    ) {
+      router.push("/login");
+    } else {
+      await fetch("api/ordersData", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          order_data : state,
-          email : userEmail,
+          order_data: state,
+          email: userEmail,
           order_date: new Date().toDateString(),
         }),
       }).then((response) => {
         if (response.status === 200) {
-          // dispatch({ type: "DROP" }),alert("Order was successfully");
           dispatch({ type: "DROP" });
           setSuccess(true);
         } else if (response.status === 400) {
@@ -32,9 +42,8 @@ function Cart() {
           setFail(true);
         }
       });
-    // }
+    }
   };
-
   let totalPrice = state.reduce((total,food) => total + food.price,0) //0+next , next+next1, .....
 
   return (
