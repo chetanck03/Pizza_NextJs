@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link'
 import { useRouter } from "next/router";
 
-function login() {
+function Login() {
   const router = useRouter();
   
   const [credentials, setCredentials] = useState({email: "",password: ""})
@@ -119,4 +119,4 @@ function login() {
   )
 }
 
-export default login
+export default Login
