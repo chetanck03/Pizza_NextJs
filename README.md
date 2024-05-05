@@ -93,5 +93,4 @@ npm i jsonwebtoken bcryptjs
 ## 10) Admin :
 - Create Admin Folder in the pages folder
 - After that create file (createFoodData.js) file in the API folder
-
-
+- Deploy the project on the vercel
