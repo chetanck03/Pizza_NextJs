@@ -75,7 +75,7 @@ export default function Card(props) {
           </div>
           {/* contents */}
           <div className="p-4">
-            <div className="font-bold mb-2 text-xl uppercase">{data.name}</div>
+            <div className="font-bold mb-2 dark:text-gray-100 text-xl uppercase">{data.name}</div>
             <p className="short_description text-gray-700 dark:text-gray-400 text-base">
               {data.description}
             </p>
@@ -119,12 +119,12 @@ export default function Card(props) {
         {/* Price  */}
         <div className="flex p-4 font-bold justify-between">
 
-          <button onClick={handleAddToCart} className="border dark:border-gray-400 border-gray-900 rounded p-2 hover:bg-gradient-to-r
+          <button onClick={handleAddToCart} className="border dark:text-gray-100 dark:border-gray-400 border-gray-900 rounded p-2 hover:bg-gradient-to-r
            from-indigo-700 to-orange-700 hover:text-gray-100 ">
             Add to cart
           </button>
 
-          <p className="p-2 text-xl">₹ {finalPrice} /-</p>
+          <p className="p-2 dark:text-gray-100 text-xl">₹ {finalPrice} /-</p>
         </div>
 
       </div>

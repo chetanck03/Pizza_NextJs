@@ -373,7 +373,7 @@ function Cart() {
                 </>
 
                ):(
-               <div className='font-semi text-center text-4xl'>
+               <div className='font-semi text-gray-100 text-center text-4xl'>
                 Your cart is empty 😕
                </div>
                )

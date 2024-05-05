@@ -52,7 +52,7 @@ export default function Home({data}) {
         <div className="my-6 space-x-5">
           {/* All */}
           <button 
-          className={`border-black rounded-full dark:border-white border-2 py-1 px-3 
+          className={`border-white rounded-full dark:text-gray-100 text-gray-500 dark:border-white border-2 py-1 px-3 
           ${!typeFilter && "bg-slate-300 dark:bg-slate-600"}`}
           onClick={()=>setTypeFilter(false)}
           >All
@@ -60,7 +60,7 @@ export default function Home({data}) {
 
         {/* veg */}
           <button 
-          className={`border-black rounded-full dark:border-white border-2 py-1 px-3 
+          className={`border-white rounded-full dark:text-gray-100 text-gray-500 dark:border-white border-2 py-1 px-3 
           ${typeFilter==="Veg" && "bg-slate-300 dark:bg-slate-600"}`}
           onClick={()=>setTypeFilter("Veg")}> 
           <span
@@ -74,7 +74,7 @@ export default function Home({data}) {
           </button>
         {/* Non - Veg */}
           <button
-          className={`border-black rounded-full dark:border-white border-2 py-1 px-3 
+          className={`border-white rounded-full dark:text-gray-100 text-gray-500 dark:border-white border-2 py-1 px-3 
           ${typeFilter==="Non-Veg" && "bg-slate-300 dark:bg-slate-600"}`}
           onClick={()=>setTypeFilter("Non-Veg")}>
           <span
@@ -102,7 +102,7 @@ export default function Home({data}) {
               {/* show in UI */}
               <div className="flex flex-col items-center justify-center">
                 {/* show data in grid */}
-                <div className="grid mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid mx-auto grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
 
                   {foodData
                     ?.filter((foodData) => category === foodData.category)
