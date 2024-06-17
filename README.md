@@ -37,7 +37,7 @@ npm i mongoose --save
 - Create the folder db.js in utils folder
 - Then create the .env.local file paste this link :
 ```
-mongodb+srv://chetanck_03:nextJsPizza@cluster0.rlql3ww.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+mongodb+srv://chetan:nextJsPizza@cluster0.rlql3ww.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 ```
 ## 3) Connect db in api file in pages :
 
